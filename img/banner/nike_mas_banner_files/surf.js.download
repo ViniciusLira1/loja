@@ -1,0 +1,269 @@
+"use strict";
+((w, d) => {
+  const { route } = document.body.dataset;
+  if (!w.V || route != "catalog/detail") return;
+  const { Storage } = w.V;
+
+  const Page = {
+    element: {
+      productPrice: "span.catalog-detail-price-value, #priceDetailBox [data-price]",
+      addToCartForm: {
+        productInput:
+          "form#add-to-cart input[name=p], form#add-to-cart input[name=id-product], form#cartform input[name=configSku]",
+        sizeOptionsList: "form#add-to-cart ul.radio-button-block",
+        sizeOptionsInput:
+          "form#add-to-cart li.radio-button-size-block:not([hidden]) input[type=radio]:not([disabled])",
+        submitButton:
+          "form#add-to-cart button[type=submit], form#cartform button[type=submit]",
+      },
+      addToWishlistAnchor: "a[data-wishlist-item], a.addToWish",
+      nonSizeAvailable:
+        "#form-size-not-found, form#add-to-cart li.radio-button-size-block:not([hidden]) input[type=radio][disabled]",
+      gallery: {
+        thumbs: "#gallery li a, #productMoreImagesList li a, #gallery div.swipe-wrap",
+      },
+      seeMore:
+        "#description-some-info, ul.accordion.accordion-product-information li.accordion-item.accordion-product-information-item",
+    },
+    value: {},
+    getTime() {
+      return Date.now();
+    },
+    getSku() {
+      if (!this.value.sku) {
+        const input = d.querySelector(this.element.addToCartForm.productInput);
+        if (!input) return null;
+        this.value.sku = input.value;
+      }
+      return this.value.sku;
+    },
+    getPrice() {
+      if (!this.value.price) {
+        const element = d.querySelector(this.element.productPrice);
+        if (!element) return null;
+        const price = element.hasAttribute("content")
+          ? element.getAttribute("content")
+          : element.dataset.price;
+        this.value.price = price;
+      }
+      return this.value.price;
+    },
+    waitFor(target, next) {
+      const observable = new MutationObserver((mutations, observer) => {
+        if (mutations.slice(-1)[0].target) {
+          next();
+          observer.disconnect();
+        }
+      });
+      observable.observe(d.querySelector(target), {
+        childList: true,
+        subtree: true,
+      });
+    },
+  };
+
+  const Game = {
+    rules: {
+      selectSize: 2,
+      selectImage: 3,
+      seeMore: 2,
+      scroll: 1,
+    },
+    goal: 3,
+    isWinner() {
+      const { score } = SurfItem.get() || { score: 0 };
+      return score >= this.goal;
+    },
+  };
+
+  const SurfItem = {
+    init() {
+      this.set({
+        sku: Page.getSku(),
+        price: Page.getPrice(),
+        startAt: Page.getTime(),
+      });
+    },
+    get() {
+      const items = Storage.get("SurfItems") ?? [];
+      const item = items.find(
+        (item) => item.sku.split("-").shift() == Page.getSku()
+      );
+      return item;
+    },
+    set(data) {
+      const items = Storage.get("SurfItems") ?? [];
+      const item = items.find(
+        (item) => item.sku.split("-").shift() == Page.getSku()
+      );
+      if (item) Object.assign(item, data);
+      else if (data.sku) items.push(data);
+      Storage.set("SurfItems", items);
+    },
+    delete() {
+      const items = Storage.get("SurfItems") ?? [];
+      const index = items.findIndex(
+        (item) => item.sku.split("-").shift() == Page.getSku()
+      );
+      items.splice(index, 1);
+      Storage.set("SurfItems", items);
+    },
+  };
+
+  const Actions = {
+    init(event) {
+      if (Page.getSku()) {
+        Actions.registerSku();
+        Listeners.register();
+      }
+    },
+    registerSku(event) {
+      SurfItem.init();
+    },
+    unregisterSku(event) {
+      SurfItem.delete();
+    },
+    enhanceSku(event) {
+      const { value } = event.target.closest("[data-value]").dataset;
+      SurfItem.set({ sku: value });
+    },
+    addScore(event) {
+      const item = SurfItem.get();
+      if (item) {
+        const el = event.type == "scroll" ? d.body : this;
+        const { score } = item;
+        const { points } = el.dataset;
+        SurfItem.set({
+          score: (+score || 0) + (+points || 0),
+        });
+      }
+    },
+    sendTrackInfo() {
+      const { sku, price, score, startAt } = SurfItem.get();
+      const endAt = Page.getTime();
+      const duration = Math.floor((endAt - startAt) / 1000);
+      const query = new URLSearchParams([
+        ["sku", sku],
+        ["price", price],
+        ["score", score],
+        ["duration", duration],
+      ]);
+      const url = `/marketing/track/pdp?${query.toString()}`;
+      const browserSupportsKeepalive = "keepalive" in new Request("");
+      if (browserSupportsKeepalive) {
+        fetch(url, { keepalive: true });
+      } else {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url, false);
+        xhr.send();
+      }
+    },
+  };
+
+  const Listeners = {
+    register() {
+      this.selectImage();
+      this.seeMore();
+      this.scroll();
+      Page.waitFor(Page.element.addToCartForm.sizeOptionsList, this.selectSize);
+
+      this.addToCart();
+      this.addToWishlist();
+      Page.waitFor(
+        Page.element.addToCartForm.sizeOptionsList,
+        this.nonSizeAvailable
+      );
+
+      this.quit();
+    },
+    selectSize() {
+      const optionsList = d.querySelector(
+        Page.element.addToCartForm.sizeOptionsList
+      );
+      optionsList.dataset.points = Game.rules.selectSize;
+      optionsList.addEventListener("click", Actions.addScore, { once: true });
+      d.querySelectorAll(Page.element.addToCartForm.sizeOptionsInput).forEach(
+        (element) => {
+          element.addEventListener("click", Actions.enhanceSku);
+        }
+      );
+    },
+    selectImage() {
+      d.querySelectorAll(Page.element.gallery.thumbs).forEach((element) => {
+        if (element.closest("ul")){
+          parent = element.closest("ul");
+        }
+        else {
+          parent = element;
+        }
+        console.log(parent);
+        parent.dataset.points = Game.rules.selectImage;
+        if (element.classList.contains("gallery-items")) {
+          parent.addEventListener("click", Actions.addScore, { once: true });
+        } else {
+          parent.addEventListener("mousedown", Actions.addScore, {
+            once: true,
+          });
+        }
+      });
+    },
+    seeMore() {
+      d.querySelectorAll(Page.element.seeMore).forEach((element) => {
+        element.dataset.points = Game.rules.seeMore;
+        element.addEventListener("click", Actions.addScore, { once: true });
+      });
+    },
+    scroll() {
+      d.body.dataset.points = Game.rules.scroll;
+      w.addEventListener("scroll", Actions.addScore, { once: true });
+    },
+    addToCart() {
+      d.querySelectorAll(Page.element.addToCartForm.submitButton).forEach(
+        (element) => {
+          element.addEventListener("click", Actions.unregisterSku, {
+            once: true,
+          });
+        }
+      );
+    },
+    addToWishlist() {
+      d.querySelector(Page.element.addToWishlistAnchor).addEventListener(
+        "click",
+        Actions.unregisterSku,
+        { once: true }
+      );
+    },
+    nonSizeAvailable() {
+      d.querySelectorAll(Page.element.nonSizeAvailable).forEach((element) => {
+        const target =
+          element.tagName == "INPUT" && !!element.getAttribute("disabled")
+            ? element.parentElement
+            : element;
+        target.addEventListener("click", Actions.unregisterSku, {
+          once: true,
+        });
+      });
+    },
+    init() {
+      w.addEventListener("load", Actions.init, { once: true });
+    },
+    reinit() {
+      w.addEventListener("visibilitychange", (event) => {
+        if (d.visibilityState == "visible") {
+          Actions.init();
+        }
+      });
+    },
+    quit() {
+      w.addEventListener("visibilitychange", (event) => {
+        if (d.visibilityState == "hidden" && Game.isWinner()) {
+          Actions.sendTrackInfo();
+          Actions.unregisterSku();
+          Listeners.reinit();
+        }
+      });
+    },
+  };
+
+  Listeners.init();
+})(window, document);
