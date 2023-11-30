@@ -12,12 +12,12 @@ const catalogoProdutos = [
     },
     {
         id :2,
-        title: 'ADIDAS ORIGINALS Tênis Unissex Superstar - Branco',
+        title: 'ADIDAS ORIGINALS Tênis Unissex Superstar',
         price: 'R$599,99',
         description:'O tênis é uma fusão de conforto e estilo, projetado para se adaptar ao seu estilo de vida dinâmico. Com uma combinação de design contemporâneo e desempenho excepcional, este calçado oferece um ajuste personalizado, garantindo conforto durante todo o dia. Construído com materiais de alta qualidade, apresenta durabilidade aprimorada, tornando-o ideal para diversas atividades, desde exercícios físicos até looks casuais. Seja para uma caminhada na cidade ou para compor seu visual diário, sendo uma escolha versátil que eleva seu estilo enquanto prioriza o conforto e a durabilidade.',
         poster:['./img/TenisAdidas/mas/tenis2/adidasPar.jpg','./img/TenisAdidas/mas/tenis2/adidasL.jpg','./img/TenisAdidas/mas/tenis2/adidasC.jpg','./img/TenisAdidas/mas/tenis2/adidas_exemplo.jpg'],
         categories:'new',
-        showHome: true,
+        showHome: false,
         brand: "adidas",
         departament:"male"
     },
@@ -104,11 +104,11 @@ const catalogoProdutos = [
     },
     {
         id :10,
-        title: 'ADIDAS ORIGINALS - Tênis Masculino Superstar - Vermelho ',
+        title: 'ADIDAS ORIGINALS Superstar - Vermelho ',
         price: 'R$359.00',
         poster:['./img/TenisAdidas/mas/tenis9/adidasPar.jpg','./img/TenisAdidas/mas/tenis9/adidasPar.jpg','./img/TenisAdidas/mas/tenis9/adidasC.jpg','./img/TenisAdidas/mas/tenis7/adidasF.jpg'],
         categories:'new',
-        showHome: true,
+        showHome: false,
         brand: "adidas",
         departament:"male",
         description:'O tênis é uma fusão de conforto e estilo, projetado para se adaptar ao seu estilo de vida dinâmico. Com uma combinação de design contemporâneo e desempenho excepcional, este calçado oferece um ajuste personalizado, garantindo conforto durante todo o dia. Construído com materiais de alta qualidade, apresenta durabilidade aprimorada, tornando-o ideal para diversas atividades, desde exercícios físicos até looks casuais. Seja para uma caminhada na cidade ou para compor seu visual diário, sendo uma escolha versátil que eleva seu estilo enquanto prioriza o conforto e a durabilidade.',
@@ -182,13 +182,15 @@ const catalogoProdutos = [
         price: 'R$450.00',
         poster:['./img/TenisNike/mas/tenis6/nikePar.jpg','./img/TenisNike/mas/tenis6/nikeF.jpg','./img/TenisNike/mas/tenis6/nikeC.jpg','./img/TenisNike/mas/tenis6/nikeL.jpg'],
         categories:'new',
-        showHome: true,
+        showHome: false,
         brand: "nike",
-        departament:"male"
+        departament:"male",
+        description:'O tênis é uma fusão de conforto e estilo, projetado para se adaptar ao seu estilo de vida dinâmico. Com uma combinação de design contemporâneo e desempenho excepcional, este calçado oferece um ajuste personalizado, garantindo conforto durante todo o dia. Construído com materiais de alta qualidade, apresenta durabilidade aprimorada, tornando-o ideal para diversas atividades, desde exercícios físicos até looks casuais. Seja para uma caminhada na cidade ou para compor seu visual diário, sendo uma escolha versátil que eleva seu estilo enquanto prioriza o conforto e a durabilidade.',
+
     },
    
     {
-        id :16,
+        id :86,
         title: 'Air Max Excee - Branco',
         price: 'R$519.99',
         poster:['./img/TenisNike/mas/tenis7/nikeL.jpg','./img/TenisNike/mas/tenis7/nikeLl.jpg','./img/TenisNike/mas/tenis7/nikePar.jpg','./img/TenisNike/mas/tenis7/nikeC.jpg'],
