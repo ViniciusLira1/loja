@@ -4,7 +4,7 @@ comprados = JSON.parse(comprados);
 comprados.forEach(compra => {
     cod = `
     <tr>
-        <th>${compra.id}</th>
+        <td>${compra.id}</td>
         <td>${compra.nome}</td>
         <td>${compra.cep}</td>
         <td>${compra.titulo}</td>
@@ -12,7 +12,7 @@ comprados.forEach(compra => {
     </tr>
     `;
 
-    var elem = document.getElementById("linhas");
+    var elem = document.getElementById("table");
     elem.innerHTML += cod;
 });
 
