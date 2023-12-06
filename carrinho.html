@@ -6,11 +6,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style/styles.css">
-
+  <link rel="stylesheet" href="style/formulario.css">
+  
+  <link rel="icon" href="img/logo-marca/letter-p.png" type="image/png">
   <script src="scripts/data.js" defer></script>
   <script src="scripts/carrinho.js" defer></script>
 
-    <title>Produtos Masculinos</title>
+    <title>Carrinho de Compras</title>
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -30,10 +32,13 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contateNos.html">Fale Conosco</a>
+              <a class="nav-link active" aria-current="page" href="carrinho.html">Lista de Pedidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
+              <a class="nav-link active" href="formulario.html">Fale Conosco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="sobreNos.html">Sobre Nós</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,66 +50,58 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                
               </ul>
             </li>
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-success" type="submit">Search</button>
-          </form>
+          
         </div>
       </div>
     </div>
   </nav>
-    <div class="background">
-       
 
-        <div class="meio">
-           <div class="titulo"> <h1>VEJA O SEU CARRINHO DE COMPRAS </h1></div>
-            <!-- <h1>Compre Já!</h1> -->
-            <!-- <p>Novas cores,agora também disponivel no tamanho dos homens</p> -->
-            
+  <div class="container pt-5">
 
-        </div><!--MEIO-->
-    </div> <!--BACKGRROUND-->
-
-    <section>
-       <div class="titulo"><h1>Carrinho de compras:</h1></div>
-       <button type="button" class="clear-cart" onclick="limparCarrinho()">LIMPAR CARRINHO</button>
-       <div class="container-roupas" id="carrinho"></div>
-    </section>
-
-    <section>
-        <div class="titulo"><h1>Endereço:</h1></div>
-        <form action="admin.html">
-          <label for="">NOME:</label>
-          <input type="text" placeholder="Digite aqui o seu nome" id="nome" required>
-          <label for="">LOGRADOURO:</label>
-          <input type="text" placeholder="Digite aqui o seu logradouro" required>
-          <label for="">CEP:</label>
-          <input type="text" placeholder="DIgite aqui o seu CEP" id="cep" required>
-          <br><br>
-          <button type="submit" onclick="comprar()" class="clear-cart buy">COMPRAR</button>
-        </form>
-    </section>
-
-    <div id="marcas">
-      <img src="./img/logo-marca/zara.png" >
-      <img src="./img/logo-marca/oppo.png" >
-      <img src="./img/logo-marca/hurley.png" >
-      <img src="./img/logo-marca/dng.png" >
-      <img src="./img/logo-marca/adidas-logo3.jpeg" >
-      <img src="./img/logo-marca/Nike-Logo-1971.jpeg" >
+    <div class="titulo mt-5"><h1>Carrinho de compras:</h1>
+    <button type="button" class="clear-cart" onclick="limparCarrinho()">LIMPAR CARRINHO</button>
     </div>
-      
- <!--MARCAS-->
 
+    <div class="row">
+      <div class="col">
+            <section class="mt-5">
+              <div class="produtoCarrinho" id="carrinho"></div>
+            </section>
+      </div>
+
+      <div class="col">
+        <section>
+          <div class="container mt-5">
+          <!-- <div class="titulo" id="title"><h1>Preencha os campos abaixo para efetuar a compra:</h1></div> -->
+            <form action="admin.html" class="formulario">
+              <h1 id="title">Finalize a compra:</h1>
+              <label for="">NOME:</label>
+              <input class="inputform" type="text" placeholder="Digite aqui o seu nome" id="nome" required>
+              <label for="">ENDEREÇO:</label>
+              <input class="inputform" type="text" placeholder="Digite aqui o seu logradouro" required>
+              <label for="">CEP:</label>
+              <input class="inputform" type="text" placeholder="DIgite aqui o seu CEP" id="cep" required>
+              <button type="submit" onclick="comprar()" class="clear-cart buy">COMPRAR</button> 
+              </div>
+              
+            </form> 
+        </section>
+      </div>
+    </div>
+
+
+    
+  </div>
+   
     
  <section class="contato">
   <div class="meio-contato">
       <h3>PureWave</h3>
-     <li> <a href="contateNos.html">Nos envie uma mensagem!</a></li>
+     <li> <a href="formulario.html">Nos envie uma mensagem!</a></li>
      
   </div> <!--MEIO CONTATO-->
   <div class="meio-contato">
@@ -131,10 +128,7 @@
   </div> <!--SHOPPING-->
 </section><!--contato-->
 
-    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+    
 </body>
 
 </html>

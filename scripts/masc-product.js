@@ -5,7 +5,7 @@ catalogoProdutos.forEach(produto => {
                 <img src="${produto.poster[0]}" id=${produto.id}>
             </a>
             <p>${produto.title}</p>
-            <h5>R$ ${produto.price}</h5>
+            <h5> ${produto.price}</h5>
             <ion-icon name="cart"></ion-icon>
         </div>
         `;

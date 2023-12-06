@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style/styles.css">
-
+  <link rel="icon" href="img/logo-marca/letter-p.png" type="image/png">
   <script src="scripts/data.js" defer></script>
   <script src="scripts/masc-product.js" defer></script>
 
@@ -30,10 +30,13 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contateNos.html">Fale Conosco</a>
+              <a class="nav-link active" aria-current="page" href="carrinho.html">Lista de Pedidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
+              <a class="nav-link active" href="formulario.html">Fale Conosco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="sobreNos.html">Sobre Nós</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,23 +48,38 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                
               </ul>
             </li>
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-success" type="submit">Search</button>
-          </form>
+          
         </div>
       </div>
     </div>
   </nav>
-    <div class="background">
-       
+    <div class="background" id="banner">
+      <style>
+        #banner{
+      background-image: url('./img/banner/chuteira.jpg');
+       background-repeat: no-repeat ;
+       background-size: cover;
+       background-position: center ;
+       width: 100%;
+       max-width: 100%;
+       height: 500px;
+       display: block;
+       }
+       h1{
+        padding: auto 10%;
+        text-align: center;
+       }
+       </style>
 
         <div class="meio">
-           <div class="titulo"> <h1>NOVOS MODELOS ADIDAS </h1></div>
+           <div class="titulo"> 
+           
+           
+          </div>
             <!-- <h1>Compre Já!</h1> -->
             <!-- <p>Novas cores,agora também disponivel no tamanho dos homens</p> -->
             
@@ -77,10 +95,23 @@
         </div><!--container-card-1-->
     </section>
 
-    <section class="cta">
+    <section class="cta" id="cta1">
+      <style>
+        #cta1{
+      background-image: url('./img/banner/vapormax.jpg');
+       background-repeat: no-repeat ;
+       background-size: cover;
+       background-position: center ;
+       width: 100%;
+       max-width: 100%;
+       height: 65vh;
+       display: block;
+       }
+       </style>
+
         <div class="text-cta" id="nike_masc">
-            <h6>Produtos Nike</h6>
-            <h4>20%OFF <br> VENHA CONFERIR </h4>
+            <!-- <h6>Produtos Nike</h6>
+            <h4>20%OFF <br> VENHA CONFERIR </h4> -->
      
         </div> <!--TEXT-CTA-->
     </section><!--CTA-->
@@ -108,7 +139,7 @@
  <section class="contato">
   <div class="meio-contato">
       <h3>PureWave</h3>
-     <li> <a href="contateNos.html">Nos envie uma mensagem!</a></li>
+     <li> <a href="formulario.html">Nos envie uma mensagem!</a></li>
      
   </div> <!--MEIO CONTATO-->
   <div class="meio-contato">
@@ -135,10 +166,6 @@
   </div> <!--SHOPPING-->
 </section><!--contato-->
 
-    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 </body>
 
 </html>

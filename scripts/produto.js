@@ -28,6 +28,7 @@ carrossel.forEach(function(elem) {
 
 const input = id;
 function add(){
+    alert("Produto adicionado ao carrinho!")
     carrinho = localStorage.getItem('carrinho')
     if(carrinho !== null){
         car = carrinho.split(',');
