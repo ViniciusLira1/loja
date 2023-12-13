@@ -1,183 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style/styles.css">
   <link rel="icon" href="img/logo-marca/letter-p.png" type="image/png">
   <script src="scripts/data.js"></script>
   <script src="scripts/index.js" defer></script>
   <title>Home</title>
 </head>
+
 <body>
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">PureWave</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">PureWave</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="carrinho.html">Lista de Pedidos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="formulario.html">Fale Conosco</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="sobreNos.html">Sobre Nós</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Páginas Dos Protudos 
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="masc_product.html">Tênis Masculino</a></li>
-                <li><a class="dropdown-item" href="fem_product.html">Tênis Feminino </a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                
-              </ul>
-            </li>
-          </ul>
-          
+  <header>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">PureWave</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">PureWave</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="carrinho.html">Lista de Pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="formulario.html">Fale Conosco</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sobreNos.html">Sobre Nós</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Páginas Dos Protudos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="masc_product.html">Tênis Masculino</a></li>
+                  <li><a class="dropdown-item" href="fem_product.html">Tênis Feminino </a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+
+                </ul>
+              </li>
+            </ul>
+
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
+
+
+  <main>
     <div class="background" id="background">
-     <style>
-      #background{
-    background-image: url('./img/banner/adidas8888.jpg');
-     background-repeat: no-repeat ;
-     background-size: cover;
-     background-position: center ;
-     width: 100%;
-     max-width: 100%;
-     height: 500px;
-     display: block;
-     }
-     </style>
-        <div class="meio">
-       
-           <div class="titulo" id="titulo"> <h1> COLEÇÃO MASCULINA </h1></div>
-           <div class="titulo"   id="titulo"> <h1>PROMOÇÃO </h1></div>
-            <!-- <h1> </h1> -->
-            <!-- <p id="titulo">Novas cores,agora também disponivel em todos os tamanhos</p> -->
-             <!-- <a href="masc_product.html"><button>Venha Conferir</button></a> -->
-            
-        </div><!--MEIO-->
-      
+      <style>
+        #background {
+          background-image: url('./img/banner/adidas8888.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 100%;
+          max-width: 100%;
+          height: 500px;
+          display: block;
+        }
+      </style>
+      <div class="meio">
+
+        <div class="titulo" id="titulo">
+          <h1> COLEÇÃO MASCULINA </h1>
+        </div>
+        <div class="titulo" id="titulo">
+          <h1>PROMOÇÃO </h1>
+        </div>
+        <!-- <h1> </h1> -->
+        <!-- <p id="titulo">Novas cores,agora também disponivel em todos os tamanhos</p> -->
+        <!-- <a href="masc_product.html"><button>Venha Conferir</button></a> -->
+
+      </div><!--MEIO-->
+
     </div> <!--BACKGRROUND-->
 
     <section>
-       <div class="titulo"> <h1>NOVAS CATEGORIAS</h1></div>
-        <div class="container-card-1">
-            <div class="cards">
-               <a href="masc_product.html"><img src="./img/banner/adidas_banner.jpg" ></a>
-            
-            </div><!--cards-->
+      <div class="titulo">
+        <h1>NOVAS CATEGORIAS</h1>
+      </div>
+      <div class="container-card-1">
+        <div class="cards">
+          <a href="masc_product.html"><img src="./img/banner/adidas_banner.jpg"></a>
 
-            <div class="cards">
-                <a href="masc_product.html#nike_masc"><img src="./img/banner/nike_masc_banner.jpeg" ></a>
-             </div><!--cards-->
+        </div><!--cards-->
 
-             <div class="cards">
-               <a href="fem_product.html#nike_fem"> <img src="./img/banner/nike_fem_banner.jpeg" ></a>
-             </div><!--cards-->
+        <div class="cards">
+          <a href="masc_product.html#nike_masc"><img src="./img/banner/nike_masc_banner.jpeg"></a>
+        </div><!--cards-->
 
-             <div class="cards">
-                <a href="fem_product.html"><img src="./img/banner/adidas_fem_banner.jpg" ></a>
-             </div><!--cards-->
+        <div class="cards">
+          <a href="fem_product.html#nike_fem"> <img src="./img/banner/nike_fem_banner.jpeg"></a>
+        </div><!--cards-->
 
-             
+        <div class="cards">
+          <a href="fem_product.html"><img src="./img/banner/adidas_fem_banner.jpg"></a>
+        </div><!--cards-->
 
 
-        </div><!--container-card-1-->
+
+
+      </div><!--container-card-1-->
     </section>
-  
+
     <section class="cta">
       <style>
         .cta {
-    /* Defina a imagem de fundo e configure as propriedades de exibição */
-    background-image: url('./img/banner/nike_index.jpg'); /* Substitua pelo caminho real da sua imagem */
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
-    background-position: center; /* Centraliza a imagem no corpo */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    margin: 10; /* Remove margens padrão do corpo */
-    height: 60vh; /* Define a altura do corpo como 100% da altura da janela de visualização (viewport) */
-    display: flex;
-    
-  }
+          /* Defina a imagem de fundo e configure as propriedades de exibição */
+          background-image: url('./img/banner/nike_index.jpg');
+          /* Substitua pelo caminho real da sua imagem */
+          background-size: cover;
+          /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+          background-position: center;
+          /* Centraliza a imagem no corpo */
+          background-repeat: no-repeat;
+          /* Evita a repetição da imagem */
+          margin: 10;
+          /* Remove margens padrão do corpo */
+          height: 60vh;
+          /* Define a altura do corpo como 100% da altura da janela de visualização (viewport) */
+          display: flex;
 
+        }
       </style>
-        <div class="text-cta" id="in">
-          <style>
-            
-          </style>
-            <h6>MODA VERÃO </h6>
-             <h4>20%OFF <br> NOVAS PEGADAS </h4>
-          
-        </div> <!--TEXT-CTA-->
+      <div class="text-cta" id="in">
+        <style>
+
+        </style>
+        <h6>MODA VERÃO </h6>
+        <h4>20%OFF <br> NOVAS PEGADAS </h4>
+
+      </div> <!--TEXT-CTA-->
     </section><!--CTA-->
     <section>
-        <div class="titulo"><h1>MAIS VENDIDOS  </h1></div>
-        <div class="container-roupas" id="container-roupas">
-            <!-- <div class="roupa">
+      <div class="titulo">
+        <h1>MAIS VENDIDOS </h1>
+      </div>
+      <div class="container-roupas" id="container-roupas">
+        <!-- <div class="roupa">
                 <a href="produto.html">  <img src="./img/TenisAdidas/mas/tenis1/adidasL.jpg" ></a>
                 <p>TENIS ASDASDADADASDAS</p>
                 <h5>$1888</h5>
                 <ion-icon name="cart"></ion-icon>
             </div> -->
-            
-        </div><!--CONTAINER-ROUPAS-->
+
+      </div><!--CONTAINER-ROUPAS-->
     </section>
+  </main>
 
-    
- <!--MARCAS-->
-
+  <!--MARCAS-->
+  <footer>
     <section class="contato">
-        <div class="meio-contato">
-            <h3>PureWave</h3>
-           <li> <a href="formulario.html">Nos envie uma mensagem!</a></li>
-           
-        </div> <!--MEIO CONTATO-->
-        <div class="meio-contato">
-            <h3>Explore</h3>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobreNos.html">Sobre Nós</a></li>
-            <li><a href="masc_product.html">Produtos Masculinos</a></li>
-            <li><a href="fem_product.html">Produtos Femininos</a></li>
-        </div> <!--MEIO CONTATO - EXPLORE-->
+      <div class="meio-contato">
+        <h3>PureWave</h3>
+        <li> <a href="formulario.html">Nos envie uma mensagem!</a></li>
 
-        <div class="meio-contato">
-            <h3>Our Services</h3>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Free shipping</a></li>
-            <li><a href="">Gift Cards</a></li>
-            
-        </div> <!--MEIO CONTATO OUR SERVICES-->
-        <div class="meio-contato">
-            <h3>Shopping</h3>
-            <li><a href="">Clothing Store</a></li>
-            <li><a href="">Treding Shoes</a></li>
-            <li><a href="">Accessories</a></li>
-            <li><a href="">Sale</a></li>
-        </div> <!--SHOPPING-->
+      </div> <!--MEIO CONTATO-->
+      <div class="meio-contato">
+        <h3>Explore</h3>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobreNos.html">Sobre Nós</a></li>
+        <li><a href="masc_product.html">Produtos Masculinos</a></li>
+        <li><a href="fem_product.html">Produtos Femininos</a></li>
+      </div> <!--MEIO CONTATO - EXPLORE-->
+
+      <div class="meio-contato">
+        <h3>Our Services</h3>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Free shipping</a></li>
+        <li><a href="">Gift Cards</a></li>
+
+      </div> <!--MEIO CONTATO OUR SERVICES-->
+      <div class="meio-contato">
+        <h3>Shopping</h3>
+        <li><a href="">Clothing Store</a></li>
+        <li><a href="">Treding Shoes</a></li>
+        <li><a href="">Accessories</a></li>
+        <li><a href="">Sale</a></li>
+      </div> <!--SHOPPING-->
     </section><!--contato-->
-   
-    
+
+  </footer>
 </body>
 
 </html>

@@ -1,163 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style/styles.css">
   <link rel="icon" href="img/logo-marca/letter-p.png" type="image/png">
 
   <script src="scripts/data.js" defer></script>
   <script src="scripts/fem-product.js" defer></script>
 
-  
+
 
   <title>Produtos Femininos</title>
 </head>
+
 <body>
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">PureWave</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">PureWave</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="carrinho.html">Lista de Pedidos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="formulario.html">Fale Conosco</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="sobreNos.html">Sobre Nós</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Páginas Dos Protudos 
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="masc_product.html">Tênis Masculino</a></li>
-                <li><a class="dropdown-item" href="fem_product.html">Tênis Feminino </a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                
-              </ul>
-            </li>
-          </ul>
-          
+  <header>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">PureWave</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">PureWave</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="carrinho.html">Lista de Pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="formulario.html">Fale Conosco</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sobreNos.html">Sobre Nós</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Páginas Dos Protudos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="masc_product.html">Tênis Masculino</a></li>
+                  <li><a class="dropdown-item" href="fem_product.html">Tênis Feminino </a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+
+                </ul>
+              </li>
+            </ul>
+
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-    <div class="background" id="background1">
-      <style>
-        #background1{
-          margin-top: 5% auto;
-          background-image: url('./img/banner/fem_adidas1.jpg');
-          background-repeat: no-repeat ;
-          background-size: cover;
-          background-position: center ;
-          width: 100%;
-          max-width: 100%;
-          height: 65vh;
-          display: block;
-       }
-       </style>
-        
+    </nav>
+  </header>
+  <div class="background" id="background1">
+    <style>
+      #background1 {
+        margin-top: 5% auto;
+        background-image: url('./img/banner/fem_adidas1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        max-width: 100%;
+        height: 65vh;
+        display: block;
+      }
+    </style>
+    <main>
 
-        <div class="meio">
-           <!-- <div class="titulo"> <h1>NOVOS MODELOS </h1></div> -->
-            <!-- <h1>PARA MULHERES</h1>
+      <div class="meio">
+        <!-- <div class="titulo"> <h1>NOVOS MODELOS </h1></div> -->
+        <!-- <h1>PARA MULHERES</h1>
             <p>Novas cores,agora também disponivel em diversos tamanhos.</p> -->
-            
-
-        </div><!--MEIO-->
-    </div> <!--BACKGRROUND-->
-
-    <section>
-       <div class="titulo"> <h1>Lançamentos Adidas </h1></div>
-       <div class="container-roupas" id="roupas-adidas"></div>
 
 
-        </div><!--container-card-1-->
-    </section>
+      </div><!--MEIO-->
+  </div> <!--BACKGRROUND-->
 
-    <section class="cta" id="cta1">
-      <style>
-        #cta1{
-      background-image: url('./img/banner/nike1234.png');
-       background-repeat: no-repeat ;
-       background-size: cover;
-       background-position: center ;
-       width: 100%;
-       max-width: 100%;
-       height: 65vh;
-       display: block;
-       }
-       </style>
-        <div class="text-cta" id="nike_fem">
-            <!-- <h6>Produtos Nike</h6>
+  <section>
+    <div class="titulo">
+      <h1>Lançamentos Adidas </h1>
+    </div>
+    <div class="container-roupas" id="roupas-adidas"></div>
+
+
+    </div><!--container-card-1-->
+  </section>
+
+  <section class="cta" id="cta1">
+    <style>
+      #cta1 {
+        background-image: url('./img/banner/nike1234.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        max-width: 100%;
+        height: 65vh;
+        display: block;
+      }
+    </style>
+    <div class="text-cta" id="nike_fem">
+      <!-- <h6>Produtos Nike</h6>
             <h4>20%OFF <br> VENHA CONFERIR </h4>
              -->
-        </div> <!--TEXT-CTA-->
-    </section><!--CTA-->
-    <section>
-        <div class="titulo"><h1>Lançamentos Nike </h1></div>
-        <div class="container-roupas" id="roupas-nike"></div><!--CONTAINER-ROUPAS-->
-    </section>
-
-    <div id="marcas">
-      <img src="./img/logo-marca/zara.png" >
-      <img src="./img/logo-marca/oppo.png" >
-      <img src="./img/logo-marca/hurley.png" >
-      <img src="./img/logo-marca/dng.png" >
-      <img src="./img/logo-marca/adidas-logo3.jpeg" >
-      <img src="./img/logo-marca/Nike-Logo-1971.jpeg" >
+    </div> <!--TEXT-CTA-->
+  </section><!--CTA-->
+  <section>
+    <div class="titulo">
+      <h1>Lançamentos Nike </h1>
     </div>
- <!--MARCAS-->
+    <div class="container-roupas" id="roupas-nike"></div><!--CONTAINER-ROUPAS-->
+  </section>
 
- <section class="contato">
-  <div class="meio-contato">
-      <h3>PureWave</h3>
-     <li> <a href="formulario.html">Nos envie uma mensagem!</a></li>
-     
-  </div> <!--MEIO CONTATO-->
-  <div class="meio-contato">
-      <h3>Explore</h3>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sobreNos.html">Sobre Nós</a></li>
-      <li><a href="masc_product.html">Produtos Masculinos</a></li>
-      <li><a href="fem_product.html">Produtos Femininos</a></li>
-  </div> <!--MEIO CONTATO - EXPLORE-->
+  <div id="marcas">
+    <img src="./img/logo-marca/zara.png">
+    <img src="./img/logo-marca/oppo.png">
+    <img src="./img/logo-marca/hurley.png">
+    <img src="./img/logo-marca/dng.png">
+    <img src="./img/logo-marca/adidas-logo3.jpeg">
+    <img src="./img/logo-marca/Nike-Logo-1971.jpeg">
+  </div>
+  <!--MARCAS-->
+  </main>
+  <footer>
+    <section class="contato">
+      <div class="meio-contato">
+        <h3>PureWave</h3>
+        <li> <a href="formulario.html">Nos envie uma mensagem!</a></li>
 
-  <div class="meio-contato">
-      <h3>Our Services</h3>
-      <li><a href="">Pricing</a></li>
-      <li><a href="">Free shipping</a></li>
-      <li><a href="">Gift Cards</a></li>
-      
-  </div> <!--MEIO CONTATO OUR SERVICES-->
-  <div class="meio-contato">
-      <h3>Shopping</h3>
-      <li><a href="">Clothing Store</a></li>
-      <li><a href="">Treding Shoes</a></li>
-      <li><a href="">Accessories</a></li>
-      <li><a href="">Sale</a></li>
-  </div> <!--SHOPPING-->
-</section><!--contato-->
+      </div> <!--MEIO CONTATO-->
+      <div class="meio-contato">
+        <h3>Explore</h3>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobreNos.html">Sobre Nós</a></li>
+        <li><a href="masc_product.html">Produtos Masculinos</a></li>
+        <li><a href="fem_product.html">Produtos Femininos</a></li>
+      </div> <!--MEIO CONTATO - EXPLORE-->
 
-    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <div class="meio-contato">
+        <h3>Our Services</h3>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Free shipping</a></li>
+        <li><a href="">Gift Cards</a></li>
+
+      </div> <!--MEIO CONTATO OUR SERVICES-->
+      <div class="meio-contato">
+        <h3>Shopping</h3>
+        <li><a href="">Clothing Store</a></li>
+        <li><a href="">Treding Shoes</a></li>
+        <li><a href="">Accessories</a></li>
+        <li><a href="">Sale</a></li>
+      </div> <!--SHOPPING-->
+    </section><!--contato-->
+  </footer>
+  <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->

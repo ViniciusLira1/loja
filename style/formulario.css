@@ -1,18 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 #title {
-    color:#555;
+    color: #555;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
     margin: 30px;
 }
 
-.formulario{
+.formulario {
     background: rgb(253, 253, 253);
     box-shadow: #55555533 0px 10px 10px;
     border: 1px solid rgb(238, 238, 238);
@@ -23,7 +23,7 @@
     max-width: 900px;
 }
 
-.formulario h3{
+.formulario h3 {
     color: #555;
     font-weight: 800;
     margin-bottom: 20px;
@@ -38,27 +38,52 @@
     outline: none;
     background-color: white;
     font-size: 16px;
-    height: 2px;
+    height: 0px;
 }
 
-.inputform::placeholder{
-    font-weight: 600;
-    color: #cfcfcf;
+.inputform-state {
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 12px;
+    margin: 10px 0;
+    outline: none;
+    background-color: white;
+    font-size: 16px;
+    height: 50px;
 }
 
-.inputform:hover{
+.inputform-state:hover {
     border: 1px solid rgb(0, 0, 0);
     transition: all 0.5s;
 }
 
-.inputform:hover::placeholder{
+.inputform-state:focus {
+    box-shadow: none;
+}
+
+.inputform-state:hover::placeholder {
+    font-weight: 600;
+    color: #7e7e7e;
+    transition: all 0.5s;
+}
+
+.inputform::placeholder {
+    font-weight: 600;
+    color: #cfcfcf;
+}
+
+.inputform:hover {
+    border: 1px solid rgb(0, 0, 0);
+    transition: all 0.5s;
+}
+
+.inputform:hover::placeholder {
     font-weight: 600;
     color: #7e7e7e;
     transition: all 0.5s;
 }
 
 
-.formulario button{
+.formulario button {
     border-radius: 12px;
     padding: 15px;
     outline: none;
@@ -72,7 +97,7 @@
 
 }
 
-.formulario button:hover{
+.formulario button:hover {
     background: rgb(69, 211, 13);
     transition: all 0.5s;
     color: white;
